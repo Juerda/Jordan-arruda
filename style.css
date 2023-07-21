@@ -1,18 +1,18 @@
-/* Estilos gerais */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', Arial, sans-serif; /* Usando a fonte Inter como padrão */
+  font-family: "Inter", Arial, sans-serif;
   color: white;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Importando a fonte Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 .light-mode {
-  background-color: white; /* Cor de fundo clara */
-  color: black;
+  background-color: #f5f5f5; /* Cor de fundo branco no modo claro */
+  color: black; /* Cor do texto em preto no modo claro */
+}
+
+.dark-mode {
+  background-color: #1e1e20; /* Cor de fundo preto no modo escuro */
 }
 
 .light-mode body {
@@ -26,10 +26,6 @@ body {
 
 .light-mode .logo h1 {
   color: black; /* Cor da logo em preto no modo claro */
-}
-
-.dark-mode {
-  background-color: black; /* Cor de fundo escura */
 }
 
 header {
@@ -160,10 +156,34 @@ header a {
   color: white; /* Cor dos ícones no modo escuro */
 }
 
-.light-mode {
-  background-color: #f5f5f5; /* Cor de fundo branco no modo claro */
+/* Textos de apresentação em português */
+.home-texto-pt,
+.sobre-texto-pt,
+.contato-texto-pt {
+  display: none;
 }
 
-.dark-mode {
-  background-color: #1E1E20; /* Cor de fundo preto no modo escuro */
+.light-mode .home-texto-pt,
+.light-mode .sobre-texto-pt,
+.light-mode .contato-texto-pt {
+  display: block;
+}
+
+/* Textos de apresentação em inglês */
+.home-texto-en,
+.sobre-texto-en,
+.contato-texto-en {
+  display: none;
+}
+
+.light-mode .home-texto-en,
+.light-mode .sobre-texto-en,
+.light-mode .contato-texto-en {
+  display: none;
+}
+
+.dark-mode .home-texto-en,
+.dark-mode .sobre-texto-en,
+.dark-mode .contato-texto-en {
+  display: block;
 }
