@@ -24,6 +24,10 @@ header {
   color: #8cb4ff; /* Cor da logo em branco no modo claro */
 }
 
+.dark-mode .logo h1 {
+  color: #8cb4ff; /* Cor da logo em branco no modo claro */
+}
+
 /* --1.2 MENU-- */
 .menu {
   flex: 2;
@@ -76,7 +80,7 @@ nav li a {
 }
 
 .menu {
- display: block; /* Mostrar o menu completo em telas maiores que 768 pixels */
+ display: flex; /* Mostrar o menu completo em telas maiores que 768 pixels */
  }
 }
 
@@ -93,25 +97,25 @@ nav li a {
 
 .menu.show {
   display: block; /* Exibir o menu quando o ícone de menu for clicado */
-align-items: center;
 }
 
 .menu ul {
-  display: none;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
   padding: 0;
   margin: 0;
+  background-color: black; /* Cor de fundo do menu */
+  position: absolute;
   top: 60px;
+  right: 0; /* Ajuste a posição horizontal conforme necessário */
+  z-index: 100; /* Garanta que o menu fique acima do header e do ícone */
+  width: 100%; /* Ocupar a largura total da tela */
   text-align: center;
-  justify-content: center;
-  align-items: center;
 }
 
 .menu ul li {
   padding: 15px;
-  background: black;
-  align-items: center;
-  justify-content: center;
 }
 
 .menu ul li a {
