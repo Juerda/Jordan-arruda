@@ -41,7 +41,6 @@ function trocarIdioma() {
     selecionarIdioma.options[1].innerText = 'English';
   }
 }
-
 function toggleMenu() {
   const menuUl = document.querySelector('.menu ul');
   menuUl.classList.toggle('show');
