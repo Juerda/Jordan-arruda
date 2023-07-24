@@ -211,35 +211,3 @@ body {
   color: black;
   background-color: white;
 }
-
-/* Textos de apresentação em português */
-.home-texto-pt,
-.sobre-texto-pt,
-.contato-texto-pt {
-  display: none;
-}
-
-.light-mode .home-texto-pt,
-.light-mode .sobre-texto-pt,
-.light-mode .contato-texto-pt {
-  display: block;
-}
-
-/* Textos de apresentação em inglês */
-.home-texto-en,
-.sobre-texto-en,
-.contato-texto-en {
-  display: none;
-}
-
-.light-mode .home-texto-en,
-.light-mode .sobre-texto-en,
-.light-mode .contato-texto-en {
-  display: none;
-}
-
-.dark-mode .home-texto-en,
-.dark-mode .sobre-texto-en,
-.dark-mode .contato-texto-en {
-  display: block;
-}
