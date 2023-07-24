@@ -211,3 +211,72 @@ body {
   color: black;
   background-color: white;
 }
+
+/* --6. BANNER-- */
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.banner img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.banner-texto h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.banner-texto .en {
+  font-size: 24px;
+}
+
+/* CSS para as caixas */
+.caixas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.caixa {
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #000000;
+
+}
+
+.caixa h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.caixa p {
+  font-size: 14px;
+}
