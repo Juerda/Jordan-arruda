@@ -183,16 +183,18 @@ header a {
 /* --3 BODY-- */
 
 body {
-  margin: 100;
-  padding: 80hz;
+  margin: 0;
+  padding: 0;
   font-family: "Inter", Arial, sans-serif;
   color: white;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.conteudo {
-  padding-top: 120px; /* Espaço para o header não cobrir o conteúdo */
-  /* Conteúdo da página */
+/* Adicione uma classe "content-container" para limitar a largura do conteúdo */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 20px;
 }
 
 .light-mode {
@@ -202,7 +204,7 @@ body {
 
 /* --3.1 Cor de fundo preto no modo escuro-- */
 .dark-mode {
-  background-color: #0e0e35; 
+  background-color: #0e0e35; /* Cor de fundo azul escuro no modo escuro */
 }
 
 /* --3.2 Cor de fundo branco no modo claro-- */
@@ -323,3 +325,7 @@ body {
   font-size: 14px;
   margin: 5px;
 }
+
+/* Adicionar uma classe para ocultar elementos */
+.hidden {
+  display: none;
