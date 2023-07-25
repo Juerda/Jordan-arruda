@@ -218,7 +218,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  height: 480px;
 }
 
 .banner img {
@@ -241,15 +241,37 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  max-width: 600px;
 }
 
 .banner-texto h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  white-space: normal; /* Impede que o título seja quebrado em várias linhas */
+  overflow: hidden; /* Oculta o texto que excede a largura da caixa */
+  text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto truncado */
 }
 
 .banner-texto .en {
   font-size: 24px;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 18px;
 }
 
 /* CSS para as caixas */
@@ -263,20 +285,41 @@ body {
 }
 
 .caixa {
-  width: 200px;
+  max-width: 300px; /* Define a largura máxima para a caixa */
   padding: 20px;
   text-align: center;
   background-color: #FFFFFF;
   border-radius: 10px;
   border: 1px solid #000000;
-
+  color: black;
 }
 
 .caixa h3 {
   font-size: 18px;
   margin-bottom: 10px;
+  white-space: normal; /* Permite que o título seja quebrado em várias linhas */
 }
 
 .caixa p {
   font-size: 14px;
+  white-space: normal; /* Permite que a descrição seja quebrada em várias linhas */
+  color: black; /* Define a cor do texto dentro das caixas para preto */
+}
+
+/* FOOTER OU RODAPE */
+
+.centralizar-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Defina a distância do body para o footer */
+  background-color: black; /* Altere a cor de fundo do footer, se necessário */
+  color: white; /* Altere a cor do texto do footer, se necessário */
+  height: 100px; /* Defina a altura desejada para o footer */
+}
+
+/* -- Adicione estilos para o texto no footer -- */
+.footer-content p {
+  font-size: 14px;
+  margin: 5px;
 }
