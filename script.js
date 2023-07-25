@@ -41,22 +41,8 @@ function fecharMenu() {
 
 function trocarIdioma() {
   idioma = selecionarIdioma.value;
-
-  // Traduzir textos no header (menu)
-  if (idioma === 'pt') {
-    document.documentElement.lang = 'pt'; // Alterando o idioma da página para português
-    document.getElementById('referencias').innerText = 'Referências';
-    document.getElementById('guias').innerText = 'Guias';
-    document.getElementById('contato').innerText = 'Contato';
-  } else {
-    document.documentElement.lang = 'en'; // Alterando o idioma da página para inglês
-    document.getElementById('referencias').innerText = 'References';
-    document.getElementById('guias').innerText = 'Guides';
-    document.getElementById('contato').innerText = 'Contact';
-  }
-
-  // Atualizar todos os textos do body com base no idioma selecionado
   atualizarTextos();
+  atualizarFooter();
 }
 
 // Função para atualizar os textos no body de acordo com o idioma selecionado
@@ -85,11 +71,28 @@ function atualizarTextos() {
   fecharMenu();
 }
 
+function atualizarFooter() {
+  const footerPt = document.getElementById('footer-pt');
+  const footerEn = document.getElementById('footer-en');
+
+  if (idioma === 'pt') {
+    footerPt.style.display = 'block';
+    footerEn.style.display = 'none';
+  } else {
+    footerPt.style.display = 'none';
+    footerEn.style.display = 'block';
+  }
+}
+
 // Evento onclick para acionar a função toggleMenu ao clicar no ícone de menu
 menuIcon.onclick = toggleMenu;
 
 // Evento onchange para acionar a função trocarIdioma ao alterar a seleção na caixa de idiomas
-selecionarIdioma.onchange = trocarIdioma;
+selecionarIdioma.onchange = function() {
+  trocarIdioma();
+  atualizarFooter();
+};
 
-// Chamar a função atualizarTextos para exibir os textos corretos no carregamento da página
+// Chamar a função atualizarTextos e atualizarFooter para exibir os textos corretos no carregamento da página
 atualizarTextos();
+atualizarFooter();
