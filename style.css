@@ -385,6 +385,7 @@ body {
 .footer-content p {
   font-size: 14px;
   margin: 5px;
+  align-items: flex-end;
 }
 
 /* Adicionar uma classe para ocultar elementos */
