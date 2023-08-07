@@ -376,6 +376,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 50px; /* Defina a distância do body para o footer */
+  margin-bottom: 0px; /* Defina a distância do body para o footer */
   background-color: black; /* Altere a cor de fundo do footer, se necessário */
   color: white; /* Altere a cor do texto do footer, se necessário */
   height: 100px; /* Defina a altura desejada para o footer */
