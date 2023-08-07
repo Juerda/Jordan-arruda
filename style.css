@@ -87,7 +87,7 @@ nav li a {
 /* Ocultar o menu em dispositivos móveis por padrão */
 @media only screen and (max-width: 768px) {
 .menu {
- display: flex;
+ display: none;
  position: absolute;
  top: 60px; /* Posicione o menu abaixo do header ou onde preferir */
  left: 0;
@@ -112,6 +112,8 @@ nav li a {
   z-index: 100; /* Garanta que o menu fique acima do header e do ícone */
   width: 100%; /* Ocupar a largura total da tela */
   text-align: center;
+  align-content: center;
+  align-items: center;
 }
 
 .menu ul li {
