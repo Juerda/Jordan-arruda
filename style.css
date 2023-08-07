@@ -375,6 +375,9 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px; /* Espaçamento entre as colunas */
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 40px auto;
 }
 
 .case-success-item {
