@@ -2,35 +2,11 @@ const body = document.body;
 const modoBotao = document.getElementById('modoBotao');
 const selecionarIdioma = document.getElementById('selecionarIdioma');
 const menuIcon = document.querySelector('.menu-icon');
+const menuDiv = document.querySelector('.menu'); // Selecionar a div do menu
 const menuUl = document.querySelector('.menu ul');
 let isModoDark = false;
 let isMenuAberto = false; // Variável para controlar o estado do menu hamburguer
 let idioma = 'pt'; // Iniciamos com idioma português por padrão
-
-// Verifica se já há uma preferência de modo no localStorage
-const modoSalvo = localStorage.getItem('modo');
-
-// Se já houver uma preferência, aplica o modo correspondente
-if (modoSalvo === 'dark') {
-  body.classList.add('dark-mode');
-  body.classList.remove('light-mode');
-  modoBotao.innerHTML = '<i class="fas fa-moon"></i>';
-  isModoDark = true;
-} else {
-  body.classList.add('light-mode');
-  body.classList.remove('dark-mode');
-  modoBotao.innerHTML = '<i class="fas fa-sun"></i>';
-  isModoDark = false;
-}
-
-// Verifica se já há uma preferência de idioma no localStorage
-const idiomaSalvo = localStorage.getItem('idioma');
-
-// Se já houver uma preferência, aplica o idioma correspondente
-if (idiomaSalvo) {
-  idioma = idiomaSalvo;
-  selecionarIdioma.value = idioma;
-}
 
 function trocarModo() {
   isModoDark = !isModoDark;
@@ -39,22 +15,20 @@ function trocarModo() {
     body.classList.add('dark-mode');
     body.classList.remove('light-mode');
     modoBotao.innerHTML = '<i class="fas fa-moon"></i>';
-    // Salva a preferência de modo no localStorage
-    localStorage.setItem('modo', 'dark');
   } else {
     body.classList.add('light-mode');
     body.classList.remove('dark-mode');
     modoBotao.innerHTML = '<i class="fas fa-sun"></i>';
-    // Salva a preferência de modo no localStorage
-    localStorage.setItem('modo', 'light');
   }
 }
 
 function toggleMenu() {
   if (window.innerWidth <= 768) { // Verificar se a largura da tela é menor ou igual a 768 pixels (tamanho do menu hamburguer)
     if (!isMenuAberto) {
+      menuDiv.style.display = 'block'; // Exibir o menu quando o ícone do menu hamburguer for clicado
       menuUl.classList.add('show');
     } else {
+      menuDiv.style.display = 'none'; // Ocultar o menu quando o ícone do menu hamburguer for clicado novamente
       menuUl.classList.remove('show');
     }
     isMenuAberto = !isMenuAberto; // Alterar o estado do menu
@@ -63,6 +37,7 @@ function toggleMenu() {
 
 function fecharMenu() {
   if (isMenuAberto) {
+    menuDiv.style.display = 'none'; // Ocultar o menu ao chamar a função fecharMenu()
     menuUl.classList.remove('show');
     isMenuAberto = false; // Alterar o estado do menu para fechado
   }
@@ -70,8 +45,6 @@ function fecharMenu() {
 
 function trocarIdioma() {
   idioma = selecionarIdioma.value;
-  // Salva a preferência de idioma no localStorage
-  localStorage.setItem('idioma', idioma);
   atualizarTextos();
   atualizarFooter();
 }
