@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Arruda</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="light-mode">
+  <header>
+    <div class="logo">
+      <!-- Logo -->
+      <h1>arruda.js</h1>
+    </div>
+    <div class="menu">
+      <center>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" id="referencias">Referências</a>
+            </li>
+            <li>
+              <a href="sobre.html#sobre" id="guias">Guias</a>
+            </li>
+            <li>
+              <a href="contato.html" id="contato">Contato</a>
+            </li>
+            <li>
+              <a href="https://discord.com/users/juerda" target="_blank">
+                <i class="fab fa-discord"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jordansales.arruda@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/juerda" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <button id="modoBotao" onclick="trocarModo()">
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
+            <li>
+              <div class="idioma-opcao">
+                <label for="selecionarIdioma" class="idioma-label">
+                  <i class="fas fa-globe"></i>
+                </label>
+                <select id="selecionarIdioma" onchange="trocarIdioma()">
+                  <option value="pt">Português</option>
+                  <option value="en">Inglês</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </center>
+    </div>
+
+    <!-- Ícone de menu (hamburguer) para dispositivos móveis -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+  
+  
+ <!-- CONTEUDO -->
+<div class="content-container">
+  <div class="conteudo">
+    <!-- Conteúdo da página Home -->
+    <center>
+      <section id="home">
+        <h2 class="pt"> Aprimore suas habilidades de programação</h2>
+        <h2 class="en">Improve your programming skills</h2>
+        <p class="pt">
+          O Arruda.js é um projeto colaborativo de código aberto que documenta as tecnologias da plataforma da Web, incluindo CSS, HTML ,JavaScript e APIs da Web. Também fornecemos um amplo conjunto de recursos de aprendizado para desenvolvedores e alunos iniciantes.
+        </p>
+        <p class="en">
+          Arruda.js is an open source collaborative project documenting web platform technologies including CSS, HTML, JavaScript and web APIs. We also provide an extensive set of learning resources for beginning developers and students.
+        </p>
+      </section>
+    </center>
+  </div>
+</div>
+  <script src="script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+   <!-- RODAPE ou FOOTER -->
+<footer class="centralizar-footer">
+  <center>
+    <div class="footer-content">
+      <p id="footer-pt">&copy; Jordan Arruda - 2023. Todos os direitos reservados.<br>Crie, inove e desenvolva - o caminho para o sucesso na programação!</p>
+      <p id="footer-en" class="hidden">&copy; Jordan Arruda - 2023. All rights reserved.<br>Create, innovate, and develop - the path to success in programming!</p>
+    </div>
+  </center>
+</footer>
+</html>
