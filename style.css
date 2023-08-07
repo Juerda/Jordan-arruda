@@ -370,14 +370,31 @@ body {
   color: black; /* Define a cor do texto dentro das caixas para preto */
 }
 
+/* Estilo do botão WhatsApp */
+.whatsapp-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25D366; /* Verde do WhatsApp */
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.whatsapp-button i {
+  margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Verde mais escuro no hover */
+}
 
 .case-success-container {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Espaçamento entre as colunas */
   flex-wrap: wrap;
-  max-width: 800px;
-  margin: 40px auto;
+  gap: 20px; /* Espaçamento entre as colunas */
 }
 
 .case-success-item {
