@@ -410,4 +410,4 @@ body {
 
 /* Adicionar uma classe para ocultar elementos */
 .hidden {
-  display: flex;
+  display: none;
