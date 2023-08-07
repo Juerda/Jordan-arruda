@@ -223,6 +223,13 @@ body {
   height: 480px;
 }
 
+.banner-2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 480px;
+}
+
 .banner img {
   width: 100vw;
   height: 100%;
@@ -236,7 +243,31 @@ body {
   filter: blur(8px);
 }
 
+.banner-2 img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  filter: blur(2px);
+  filter: brightness(0.3)
+}
+
 .banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  max-width: 600px;
+}
+
+.banner-2-texto {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -254,11 +285,32 @@ body {
   text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto truncado */
 }
 
+.banner-2-texto h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  white-space: normal; /* Impede que o título seja quebrado em várias linhas */
+  overflow: hidden; /* Oculta o texto que excede a largura da caixa */
+  text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto truncado */
+}
+
 .banner-texto .en {
   font-size: 24px;
 }
 
+.banner-2-texto .en {
+  font-size: 24px;
+}
+
 .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.banner-content-2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -272,7 +324,16 @@ body {
   margin-bottom: 20px;
 }
 
+.banner-2-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
 .banner-content p {
+  font-size: 18px;
+}
+
+.banner-2-content p {
   font-size: 18px;
 }
 
