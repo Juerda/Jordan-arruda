@@ -23,6 +23,15 @@ if (modoSalvo === 'dark') {
   isModoDark = false;
 }
 
+// Verifica se já há uma preferência de idioma no localStorage
+const idiomaSalvo = localStorage.getItem('idioma');
+
+// Se já houver uma preferência, aplica o idioma correspondente
+if (idiomaSalvo) {
+  idioma = idiomaSalvo;
+  selecionarIdioma.value = idioma;
+}
+
 function trocarModo() {
   isModoDark = !isModoDark;
 
@@ -61,6 +70,8 @@ function fecharMenu() {
 
 function trocarIdioma() {
   idioma = selecionarIdioma.value;
+  // Salva a preferência de idioma no localStorage
+  localStorage.setItem('idioma', idioma);
   atualizarTextos();
   atualizarFooter();
 }
