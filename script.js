@@ -88,6 +88,19 @@ function atualizarFooter() {
   }
 }
 
+// Adicionar evento de redimensionamento da janela para verificar a largura da tela
+window.addEventListener('resize', () => {
+  const larguraTela = window.innerWidth;
+  
+  // Verificar se a largura da tela é maior que 768 pixels
+  if (larguraTela > 768) {
+    menuDiv.style.display = 'block'; // Exibir o menu caso seja maior que 768 pixels
+  } else {
+    menuDiv.style.display = 'none'; // Ocultar o menu caso seja menor ou igual a 768 pixels
+    isMenuAberto = false; // Reiniciar o estado do menu para fechado
+  }
+});
+
 // Evento onclick para acionar a função toggleMenu ao clicar no ícone de menu
 menuIcon.onclick = toggleMenu;
 
