@@ -7,6 +7,22 @@ let isModoDark = false;
 let isMenuAberto = false; // Variável para controlar o estado do menu hamburguer
 let idioma = 'pt'; // Iniciamos com idioma português por padrão
 
+// Verifica se já há uma preferência de modo no localStorage
+const modoSalvo = localStorage.getItem('modo');
+
+// Se já houver uma preferência, aplica o modo correspondente
+if (modoSalvo === 'dark') {
+  body.classList.add('dark-mode');
+  body.classList.remove('light-mode');
+  modoBotao.innerHTML = '<i class="fas fa-moon"></i>';
+  isModoDark = true;
+} else {
+  body.classList.add('light-mode');
+  body.classList.remove('dark-mode');
+  modoBotao.innerHTML = '<i class="fas fa-sun"></i>';
+  isModoDark = false;
+}
+
 function trocarModo() {
   isModoDark = !isModoDark;
 
@@ -14,10 +30,14 @@ function trocarModo() {
     body.classList.add('dark-mode');
     body.classList.remove('light-mode');
     modoBotao.innerHTML = '<i class="fas fa-moon"></i>';
+    // Salva a preferência de modo no localStorage
+    localStorage.setItem('modo', 'dark');
   } else {
     body.classList.add('light-mode');
     body.classList.remove('dark-mode');
     modoBotao.innerHTML = '<i class="fas fa-sun"></i>';
+    // Salva a preferência de modo no localStorage
+    localStorage.setItem('modo', 'light');
   }
 }
 
